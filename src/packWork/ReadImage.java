@@ -5,13 +5,14 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 
-public class ReadImage {
+public class ReadImage extends ReadImageAbstract {
 
-    public ReadImage() {
+    {
         System.out.println("Reading image from source.");
     }
 
-    public static BufferedImage readImage (String file) throws IOException {
+    @Override
+    public BufferedImage getImage(String file) throws IOException {
 
         long startTime = System.nanoTime();
 
@@ -22,5 +23,16 @@ public class ReadImage {
 
         return sourceImage;
     }
+
+    @Override
+    public BufferedImage processImage(String file) throws IOException {
+        return null;
+    }
+
+    @Override
+    public void writeImg(BufferedImage processedImg, String outFile) throws IOException {
+
+    }
+
 
 }

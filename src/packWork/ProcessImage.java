@@ -3,10 +3,15 @@ package packWork;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 
-public class ProcessImage {
+public class ProcessImage extends ProcessImageAbstract{
 
+    static {
+        {
+            System.out.println("Processing image 1.");
+        }
+    }
     public ProcessImage(){
-        System.out.println("Processing image.");
+        //System.out.println("Processing image.");
     }
 
     public static BufferedImage enlargeImage(BufferedImage image, int n) throws IOException {
@@ -28,6 +33,11 @@ public class ProcessImage {
         System.out.println("Total execution time to process image: " + elapsedTime/1000000 + " ms");
 
         return enlargedImage;
+
+    }
+
+    @Override
+    public void writeImg(BufferedImage processedImg, String outFile) throws IOException {
 
     }
 }
