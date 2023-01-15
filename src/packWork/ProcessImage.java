@@ -1,15 +1,17 @@
-import javax.imageio.ImageIO;
+package packWork;
+
 import java.awt.image.BufferedImage;
-import java.io.File;
 import java.io.IOException;
 
-public class ReadImage {
+public class ProcessImage {
 
-    ReadImage() {
-
+    public ProcessImage(){
+        System.out.println("Processing image.");
     }
 
     public static BufferedImage enlargeImage(BufferedImage image, int n) throws IOException {
+
+        long startTime = System.nanoTime();
 
         int w = n * image.getWidth();
         int h = n * image.getHeight();
@@ -21,8 +23,11 @@ public class ReadImage {
                 enlargedImage.setRGB(x, y, image.getRGB(x / n, y / n));
             }
         }
+
+        long elapsedTime = System.nanoTime() - startTime;
+        System.out.println("Total execution time to process image: " + elapsedTime/1000000 + " ms");
+
         return enlargedImage;
 
     }
-
 }
