@@ -5,6 +5,7 @@ import java.io.IOException;
 
 public interface ImageStage {
 
-    BufferedImage getImage(String file) throws IOException;
-    void writeImg(BufferedImage processedImg, String outFile) throws IOException;
+    void readImage(String fileName, BufferedImage img) throws IOException;
+    void processImage(BufferedImage sourceImg, BufferedImage img, int n) throws IOException;
+    void writeImage(BufferedImage processedImg, String outFile) throws IOException;
 }

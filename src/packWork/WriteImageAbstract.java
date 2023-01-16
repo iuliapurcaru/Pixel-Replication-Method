@@ -9,10 +9,6 @@ public abstract class WriteImageAbstract implements ImageStage {
 
     }
 
-    public abstract BufferedImage processImage(String file) throws IOException;
-
     @Override
-    public void writeImg(BufferedImage processedImg, String outFile) throws IOException {
-
-    }
+    public abstract void writeImage(BufferedImage processedImg, String outFile) throws IOException;
 }

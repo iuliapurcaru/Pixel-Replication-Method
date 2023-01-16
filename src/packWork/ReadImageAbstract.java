@@ -8,12 +8,7 @@ public abstract class ReadImageAbstract implements ImageStage {
     public ReadImageAbstract() {
 
     }
-
     @Override
-    public BufferedImage getImage(String file) throws IOException {
+    public abstract void readImage(String fileName, BufferedImage img) throws IOException;
 
-        return null;
-    }
-
-    public abstract BufferedImage processImage(String file) throws IOException;
 }

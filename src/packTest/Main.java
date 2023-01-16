@@ -1,11 +1,15 @@
 package packTest;
 
+import packWork.ProcessImage;
+import packWork.ReadImage;
+import packWork.WriteImage;
+
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 
 public class Main {
 
-    static BufferedImage img = null;
+
     public static void main(String[] args) throws IOException {
 
         long startTime = System.nanoTime();
@@ -15,16 +19,17 @@ public class Main {
         long elapsedTime = System.nanoTime() - startTime;
         System.out.println("Total execution time to identify source and destination image: " + elapsedTime + " ns");
 
-//        ReadImage read1 = new ReadImage();
-//        img = ReadImage.readImage(img1);
-//        ReadImage2 read2 = new ReadImage2();
-//        img = ReadImage2.readImage(img2);
-//
-//        ProcessImage process = new ProcessImage();
-//        img = ProcessImage.enlargeImage(img, 4);
-//
-//        WriteImage write = new WriteImage();
-//        WriteImage.writeImg(img, processedImg1);
+        BufferedImage sourceImage = null;
+        BufferedImage enlargedImage = null;
+
+        ReadImage read = new ReadImage();
+        sourceImage = read.readImage(sourceImg, sourceImage);
+
+        ProcessImage process = new ProcessImage();
+        enlargedImage = process.processImage(enlargedImage, sourceImage, 2);
+
+        WriteImage write = new WriteImage();
+        WriteImage.writeImage(enlargedImage, processedImg);
 
     }
 }

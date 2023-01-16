@@ -3,41 +3,36 @@ package packWork;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 
-public class ProcessImage extends ProcessImageAbstract{
+public class ProcessImage {
 
     static {
-        {
-            System.out.println("Processing image 1.");
-        }
-    }
-    public ProcessImage(){
-        //System.out.println("Processing image.");
+        System.out.println("Processing image.");
     }
 
-    public static BufferedImage enlargeImage(BufferedImage image, int n) throws IOException {
+    public ProcessImage() {
+
+    }
+
+    public static BufferedImage processImage(BufferedImage enlargedImg, BufferedImage img, int n) throws IOException {
 
         long startTime = System.nanoTime();
 
-        int w = n * image.getWidth();
-        int h = n * image.getHeight();
+        int w = n * img.getWidth();
+        int h = n * img.getHeight();
 
-        BufferedImage enlargedImage = new BufferedImage(w, h, image.getType());
+        enlargedImg = new BufferedImage(w, h, img.getType());
 
         for (int y = 0; y < h; ++y) {
             for (int x = 0; x < w; ++x) {
-                enlargedImage.setRGB(x, y, image.getRGB(x / n, y / n));
+                enlargedImg.setRGB(x, y, img.getRGB(x / n, y / n));
             }
         }
 
         long elapsedTime = System.nanoTime() - startTime;
-        System.out.println("Total execution time to process image: " + elapsedTime/1000000 + " ms");
+        System.out.println("Total execution time to process image: " + elapsedTime / 1000000 + " ms");
 
-        return enlargedImage;
-
-    }
-
-    @Override
-    public void writeImg(BufferedImage processedImg, String outFile) throws IOException {
+        return enlargedImg;
 
     }
 }
+

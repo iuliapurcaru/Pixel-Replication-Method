@@ -10,9 +10,5 @@ public abstract class ProcessImageAbstract implements ImageStage {
     }
 
     @Override
-    public BufferedImage getImage(String file) throws IOException {
-
-        return null;
-    }
-
+    public abstract void processImage(BufferedImage sourceImg, BufferedImage img, int n) throws IOException;
 }

@@ -5,34 +5,27 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 
-public class ReadImage extends ReadImageAbstract {
+public class ReadImage {
 
     {
         System.out.println("Reading image from source.");
     }
 
-    @Override
-    public BufferedImage getImage(String file) throws IOException {
+    public ReadImage() throws IOException {
+
+    }
+
+    public static BufferedImage readImage(String fileName, BufferedImage sourceImage) throws IOException {
 
         long startTime = System.nanoTime();
 
-        BufferedImage sourceImage = ImageIO.read(new File(file));
+        sourceImage = ImageIO.read(new File(fileName));
 
         long elapsedTime = System.nanoTime() - startTime;
         System.out.println("Total execution time to read image: " + elapsedTime/1000000 + " ms");
 
         return sourceImage;
-    }
-
-    @Override
-    public BufferedImage processImage(String file) throws IOException {
-        return null;
-    }
-
-    @Override
-    public void writeImg(BufferedImage processedImg, String outFile) throws IOException {
 
     }
-
 
 }

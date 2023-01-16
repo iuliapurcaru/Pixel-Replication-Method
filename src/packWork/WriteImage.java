@@ -5,23 +5,17 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 
-public class WriteImage extends WriteImageAbstract {
+public class WriteImage {
 
     {
         System.out.println("Writing image to destination.");
     }
 
-    @Override
-    public BufferedImage getImage(String file) throws IOException {
-        return null;
+    public WriteImage() {
+
     }
 
-    @Override
-    public BufferedImage processImage(String file) throws IOException {
-        return null;
-    }
-
-    public void writeImg(BufferedImage processedImg, String outFile) throws IOException {
+    public static void writeImage(BufferedImage processedImg, String outFile) throws IOException {
 
         long startTime = System.nanoTime();
 
@@ -31,4 +25,5 @@ public class WriteImage extends WriteImageAbstract {
         long elapsedTime = System.nanoTime() - startTime;
         System.out.println("Total execution time to write image: " + elapsedTime/1000000 + " ms");
     }
+
 }
