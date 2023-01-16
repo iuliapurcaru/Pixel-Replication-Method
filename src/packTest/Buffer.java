@@ -1,4 +1,4 @@
-package packWork;
+package packTest;
 
 class Buffer {
     private int number = -1;

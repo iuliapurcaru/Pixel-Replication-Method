@@ -1,8 +1,8 @@
 package packTest;
 
 import packWork.ProcessImage;
-import packWork.ReadImage;
-import packWork.WriteImage;
+import packWork.ReadImage1;
+import packWork.WriteImage1;
 
 import java.awt.image.BufferedImage;
 import java.io.IOException;
@@ -22,14 +22,14 @@ public class Main {
         BufferedImage sourceImage = null;
         BufferedImage enlargedImage = null;
 
-        ReadImage read = new ReadImage();
-        sourceImage = read.readImage(sourceImg, sourceImage);
+        ReadImage1 read = new ReadImage1();
+        sourceImage = read.readImage();
 
         ProcessImage process = new ProcessImage();
-        enlargedImage = process.processImage(enlargedImage, sourceImage, 2);
+        enlargedImage = process.processImage(sourceImage, 2);
 
-        WriteImage write = new WriteImage();
-        WriteImage.writeImage(enlargedImage, processedImg);
+        WriteImage1 write = new WriteImage1();
+        WriteImage1.writeImage(enlargedImage);
 
     }
 }

@@ -5,10 +5,17 @@ import java.io.IOException;
 
 public abstract class ReadImageAbstract implements ImageStage {
 
-    public ReadImageAbstract() {
+    public ReadImageAbstract() {}
 
+    public static BufferedImage readImage(String fileName, BufferedImage sourceImage) throws IOException {
+        return null;
     }
+
     @Override
-    public abstract void readImage(String fileName, BufferedImage img) throws IOException;
+    public void counter() {
+        int counter = 0;
+        counter++;
+    }
+
 
 }

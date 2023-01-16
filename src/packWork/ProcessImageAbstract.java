@@ -5,10 +5,17 @@ import java.io.IOException;
 
 public abstract class ProcessImageAbstract implements ImageStage {
 
-    public ProcessImageAbstract() {
+    public ProcessImageAbstract() {}
 
+    public static BufferedImage processImage(BufferedImage img, int n) throws IOException {
+        return null;
     }
 
     @Override
-    public abstract void processImage(BufferedImage sourceImg, BufferedImage img, int n) throws IOException;
+    public void counter() {
+        int counter = 0;
+        counter++;
+    }
+
+
 }

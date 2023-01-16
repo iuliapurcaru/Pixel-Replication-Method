@@ -1,4 +1,6 @@
-package packWork;
+package packTest;
+
+import packTest.Buffer;
 
 class Consumer extends Thread {
     private Buffer buffer;

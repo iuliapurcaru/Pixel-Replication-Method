@@ -5,10 +5,17 @@ import java.io.IOException;
 
 public abstract class WriteImageAbstract implements ImageStage {
 
-    public WriteImageAbstract() {
+    public WriteImageAbstract() {}
+
+    public static void writeImage(BufferedImage processedImg) throws IOException {
 
     }
 
     @Override
-    public abstract void writeImage(BufferedImage processedImg, String outFile) throws IOException;
+    public void counter() {
+        int counter = 0;
+        counter++;
+    }
+
+
 }

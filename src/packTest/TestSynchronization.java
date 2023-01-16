@@ -1,4 +1,8 @@
-package packWork;
+package packTest;
+
+import packTest.Buffer;
+import packTest.Consumer;
+import packTest.Producer;
 
 public class TestSynchronization {
     public static void main (String[] args) throws InterruptedException {
