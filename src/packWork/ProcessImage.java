@@ -1,7 +1,6 @@
 package packWork;
 
 import java.awt.image.BufferedImage;
-import java.io.IOException;
 
 public class ProcessImage extends ProcessImageAbstract {
 
@@ -13,7 +12,7 @@ public class ProcessImage extends ProcessImageAbstract {
 
     }
 
-    public static BufferedImage processImage(BufferedImage img, int n) throws IOException {
+    public static BufferedImage processImage(BufferedImage img, int n) {
 
         long startTime = startTime();
 

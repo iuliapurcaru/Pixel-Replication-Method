@@ -1,7 +1,5 @@
 package packWork;
 
-import java.awt.image.BufferedImage;
-
 public interface ImageStage {
 
     static long startTime() {

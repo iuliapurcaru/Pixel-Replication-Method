@@ -1,7 +1,5 @@
 package packTest;
 
-import java.util.Scanner;
-
 public class Input extends Thread {
 
     public void start(){

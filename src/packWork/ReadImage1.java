@@ -2,7 +2,6 @@ package packWork;
 
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
-import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 
@@ -12,7 +11,7 @@ public class ReadImage1 extends ReadImageAbstract {
         System.out.println("Reading image 1 from source.");
     }
 
-    public ReadImage1() throws IOException {
+    public ReadImage1() {
 
     }
 
