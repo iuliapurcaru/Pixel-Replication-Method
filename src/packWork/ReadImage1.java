@@ -3,6 +3,7 @@ package packWork;
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
 
 public class ReadImage1 extends ReadImageAbstract {
@@ -17,9 +18,9 @@ public class ReadImage1 extends ReadImageAbstract {
 
     public static BufferedImage readImage() throws IOException {
 
-        BufferedImage sourceImage;
         long startTime = startTime();
-        sourceImage = ImageIO.read(new File("source_images/img1.bmp"));
+        FileInputStream sourceFile = new FileInputStream("source_images/img1.bmp");
+        BufferedImage sourceImage = ImageIO.read(sourceFile);
         long endTime = endTime();
         elapsedTime(startTime, endTime);
 

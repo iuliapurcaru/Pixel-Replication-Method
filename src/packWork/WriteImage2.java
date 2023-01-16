@@ -3,6 +3,7 @@ package packWork;
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
 import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
 
 public class WriteImage2 extends WriteImageAbstract{
@@ -15,8 +16,8 @@ public class WriteImage2 extends WriteImageAbstract{
 
         long startTime = startTime();
 
-        File outputfile = new File("processed_images/img2_resized.bmp");
-        ImageIO.write(processedImg, "bmp", outputfile);
+        FileOutputStream outputFile = new FileOutputStream("processed_images/img2_resized.bmp");
+        ImageIO.write(processedImg, "bmp", outputFile);
 
         long endTime = endTime();
         elapsedTime(startTime, endTime);
